@@ -12,5 +12,11 @@
  */
 
 return [
-    // ...
+    'db' => [
+        'driver' => 'Pdo',
+        'dsn'    => 'mysql:dbname=db_zend; host=localhost',//sprintf('sqlite:%s/data/zftutorial.db', realpath(getcwd())),
+        'driver_option' => array(
+        	PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
+        )
+    ],
 ];
