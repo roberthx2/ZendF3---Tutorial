@@ -28,7 +28,7 @@ class AlbumController extends AbstractActionController
         $page = ($page < 1) ? 1 : $page;
         $paginator->setCurrentPageNumber($page);
 
-        $paginator->setItemCountPerPage(10);
+        $paginator->setItemCountPerPage(20);
 
         return new ViewModel(['paginator' => $paginator]);
     }
